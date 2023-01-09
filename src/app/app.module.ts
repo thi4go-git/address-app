@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddressModule } from './address/address.module';
+import { PessoaModule } from './pessoa/pessoa.module';
+import { EnderecoModule } from './endereco/endereco.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { AddressModule } from './address/address.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AddressModule
+    PessoaModule,
+    EnderecoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
