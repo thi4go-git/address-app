@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
       .obterToken(this.username, this.password)
       .subscribe(response => {
         const access_token = JSON.stringify(response);
+        console.log(response);
         localStorage.setItem('access_token', access_token);
         this.router.navigate(['/home'])
       }, errorResponse => {

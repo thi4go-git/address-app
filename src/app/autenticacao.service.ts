@@ -22,12 +22,10 @@ export class AutenticacaoService {
       .set('username', username)
       .set('password', password)
       .set('grant_type', 'password');
-
     const headers = {
       'Authorization': 'Basic ' + btoa(environment.CLI_ID + ':' + environment.CLI_SECRET),
       'Content-Type': 'application/x-www-form-urlencoded'
     };
-
     return this.http.post(URL_TOKEN, params.toString(), { headers });
   }
 
@@ -57,7 +55,8 @@ export class AutenticacaoService {
       // console.log(this.jwtHelper.decodeToken(token).email);
       // console.log(this.jwtHelper.decodeToken(token).preferred_username);
       // console.log(this.jwtHelper.isTokenExpired(token));
-      // console.log(this.jwtHelper.decodeToken(token).exp);
+      //  console.log(this.jwtHelper.decodeToken(token).exp);
+
       const usuario = this.jwtHelper.decodeToken(token).name
       return usuario;
     }

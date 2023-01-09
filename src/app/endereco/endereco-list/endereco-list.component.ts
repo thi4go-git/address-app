@@ -22,7 +22,7 @@ export class EnderecoListComponent implements OnInit {
     this.service.listarClientes()
       .subscribe(resposta => {
         console.log(resposta);
-
+        this.listaEnderecos = resposta;  
       }, responseError => {
         console.log(responseError);
       });
