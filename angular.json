@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "address-app"
+    }
+  },
+  "defaultProject": "address-app",
+  "cli": {
+    "analytics": "a93e5486-393d-4d14-a200-93f2487d29ce"
+  }
 }
