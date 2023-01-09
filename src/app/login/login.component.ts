@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AutenticacaoService } from '../autenticacao.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,19 +13,28 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
   loginError: boolean;
+  //
+  erros: string[];
 
 
   constructor(
     private router: Router,
-    private autenticacao: AutenticacaoService
+    private authService: AutenticacaoService
   ) { }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
-    console.log("username: " + this.username + " | password: " + this.password);
-    this.router.navigate(['/home']);
+    this.authService
+      .obterToken(this.username, this.password)
+      .subscribe(response => {
+        console.log(response);
+      }, errorResponse => {
+        console.log(errorResponse.message);
+      }
+      )
+
   }
 
 
