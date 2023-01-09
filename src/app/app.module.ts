@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PessoaModule } from './pessoa/pessoa.module';
 import { EnderecoModule } from './endereco/endereco.module';
 import { TemplateModule } from './template/template.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TemplateModule } from './template/template.module';
     AppRoutingModule,
     TemplateModule,
     PessoaModule,
-    EnderecoModule
+    EnderecoModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
