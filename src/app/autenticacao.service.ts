@@ -50,5 +50,24 @@ export class AutenticacaoService {
     return null;
   }
 
+  getUsuarioAutenticado() {
+    const token = this.obterTokenStorage();
+    if (token) {
+      // console.log(this.jwtHelper.decodeToken(token).name);
+      // console.log(this.jwtHelper.decodeToken(token).email);
+      // console.log(this.jwtHelper.decodeToken(token).preferred_username);
+      // console.log(this.jwtHelper.isTokenExpired(token));
+      // console.log(this.jwtHelper.decodeToken(token).exp);
+      const usuario = this.jwtHelper.decodeToken(token).name
+      return usuario;
+    }
+  }
+
+  getExpira() {
+    const token = this.obterTokenStorage();
+    if (token) {
+      return this.jwtHelper.decodeToken(token).exp;
+    }
+  }
 
 }

@@ -1,0 +1,54 @@
+<h1 class="mt-4">Endereços</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Consulta</li>
+</ol>
+<div class="container">
+    <div id="row">
+        <div id="col-md-2">
+            <button class="btn btn-warning">
+                <i class="fa fa-plus"></i>Novo
+            </button>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>cep</th>
+                        <th>logradouro</th>
+                        <th>complemento</th>
+                        <th>bairro</th>
+                        <th>localidade</th>
+                        <th>uf</th>
+                        <th>ibge</th>
+                        <th>gia</th>
+                        <th>ddd</th>
+                        <th>siafi</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let endereco of listaEnderecos">
+
+                        <td>{{ endereco.id }}</td>
+                        <td>{{ endereco.cep }}</td>
+                        <td>{{ endereco.logradouro }}</td>
+                        <td>{{ endereco.complemento }}</td>
+                        <td>{{ endereco.bairro }}</td>
+                        <td>{{ endereco.localidade }}</td>
+                        <td>{{ endereco.uf }}</td>
+                        <td>{{ endereco.ibge }}</td>
+                        <td>{{ endereco.gia }}</td>
+                        <td>{{ endereco.ddd }}</td>
+                        <td>{{ endereco.siafi }}</td>
+                        <td></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

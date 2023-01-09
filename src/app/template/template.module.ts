@@ -5,6 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { CorpoComponent } from './corpo/corpo.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { EnderecoModule } from '../endereco/endereco.module';
 
 
 
@@ -14,7 +15,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     CommonModule,
     MatToolbarModule,
     MatIconModule,
-    MatTabsModule
+    MatTabsModule,
+    EnderecoModule
   ], exports: [
     CabecalhoComponent,
     CorpoComponent

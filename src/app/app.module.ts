@@ -11,7 +11,11 @@ import { LayoutComponent } from './layout/layout.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { AutenticacaoService } from './autenticacao.service';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
+import { EnderecoService } from './endereco.service';
+import { TokenInterceptor } from './token.interceptor';
+
+
 
 @NgModule({
   declarations: [
@@ -28,9 +32,17 @@ import { HttpClientModule } from '@angular/common/http'
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule
+
   ],
   providers: [
-    AutenticacaoService
+    AutenticacaoService,
+    EnderecoService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+
   ],
   bootstrap: [AppComponent]
 })
