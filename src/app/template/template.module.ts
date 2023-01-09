@@ -3,17 +3,21 @@ import { CommonModule } from '@angular/common';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { CorpoComponent } from './corpo/corpo.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 
 @NgModule({
-  declarations: [CabecalhoComponent],
+  declarations: [CabecalhoComponent, CorpoComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatTabsModule
   ], exports: [
-    CabecalhoComponent
+    CabecalhoComponent,
+    CorpoComponent
   ]
 })
 export class TemplateModule { }
