@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  CLI_ID: 'karkus-keycloak-client',
+  CLI_SECRET: 'Yo0q11Jt70p6DnT0vNRM6nnBf8jDGNzl'
 };
 
 /*
