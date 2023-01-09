@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PessoaModule } from './pessoa/pessoa.module';
 import { EnderecoModule } from './endereco/endereco.module';
+import { TemplateModule } from './template/template.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { EnderecoModule } from './endereco/endereco.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    TemplateModule,
     PessoaModule,
     EnderecoModule
   ],
