@@ -18,9 +18,14 @@ export class CabecalhoComponent implements OnInit {
   ngOnInit(): void {
     this.expira = this.authService.getExpira();
     const today = new Date()
-    this.dataExpira = new Date((today.getTime() + 1800 ));
+    this.dataExpira = new Date((today.getTime() + 1800));
     this.usuarioLogado = this.authService.getUsuarioAutenticado();
 
+  }
+
+  encerrarSessao() {
+    this.authService.encerrarSessao();
+    location.reload();
   }
 
 }

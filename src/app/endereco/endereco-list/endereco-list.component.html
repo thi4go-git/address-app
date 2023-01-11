@@ -1,46 +1,44 @@
-<h1 class="mt-4">Endereços</h1>
-<ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Consulta</li>
-</ol>
+<div class="espaco">
+    <h1 class="mt-4">Endereços</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Consulta</li>
+    </ol>
+    <br />
+    <div class="row">
+        <div class="col-md-12 table-responsive">
+            <table class="table table-condensed table-hover table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>cep</th>
+                        <th>logradouro</th>
+                        <th>complemento</th>
+                        <th>bairro</th>
+                        <th>localidade</th>
+                        <th>uf</th>
+                        <th>ibge</th>
+                        <th>gia:</th>
+                        <th>ddd</th>
+                        <th>siafi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let endereco of listaEnderecos">
+                        <td>{{ endereco.id }}</td>
+                        <td>{{ endereco.cep }}</td>
+                        <td>{{ endereco.logradouro }}</td>
+                        <td>{{ endereco.complemento }}</td>
+                        <td>{{ endereco.bairro }}</td>
+                        <td>{{ endereco.localidade }}</td>
+                        <td>{{ endereco.uf }}</td>
+                        <td>{{ endereco.ibge }}</td>
+                        <td>{{ endereco.gia }}</td>
+                        <td>{{ endereco.ddd }}</td>
+                        <td>{{ endereco.siafi }}</td>
+                    </tr>
+                </tbody>
+            </table>
 
-
-<br />
-
-
-<div class="row">
-    <div class="col-md-12 table-responsive">
-        <table class="table table-condensed table-hover table-striped">
-            <thead class="thead-dark">
-                <tr>
-                    <th>Id</th>
-                    <th>cep</th>
-                    <th>logradouro</th>
-                    <th>complemento</th>
-                    <th>bairro</th>
-                    <th>localidade</th>
-                    <th>uf</th>
-                    <th>ibge</th>
-                    <th>gia:</th>
-                    <th>ddd</th>
-                    <th>siafi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let endereco of listaEnderecos">
-                    <td>{{ endereco.id }}</td>
-                    <td>{{ endereco.cep }}</td>
-                    <td>{{ endereco.logradouro }}</td>
-                    <td>{{ endereco.complemento }}</td>
-                    <td>{{ endereco.bairro }}</td>
-                    <td>{{ endereco.localidade }}</td>
-                    <td>{{ endereco.uf }}</td>
-                    <td>{{ endereco.ibge }}</td>
-                    <td>{{ endereco.gia }}</td>
-                    <td>{{ endereco.ddd }}</td>
-                    <td>{{ endereco.siafi }}</td>
-                </tr>
-            </tbody>
-        </table>
-
+        </div>
     </div>
 </div>

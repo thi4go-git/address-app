@@ -67,4 +67,8 @@ export class AutenticacaoService {
     }
   }
 
+  encerrarSessao() {
+    localStorage.removeItem('access_token');
+  }
+
 }

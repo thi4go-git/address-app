@@ -5,3 +5,8 @@
 .espaco-nome-menu {
     margin-left: 30 px;
 }
+
+.cursorMao {
+    cursor: pointer;
+    color: white;
+}
