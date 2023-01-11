@@ -5,9 +5,7 @@ import { environment } from '../environments/environment'
 import { JwtHelperService } from '@auth0/angular-jwt'
 
 
-const URL_TOKEN = '/autenticacao';
-const CLI_ID = 'karkus-keycloak-client';
-const CLI_SECRET = 'Yo0q11Jt70p6DnT0vNRM6nnBf8jDGNzl';
+
 @Injectable({ providedIn: 'root' })
 export class AutenticacaoService {
 
@@ -26,7 +24,7 @@ export class AutenticacaoService {
       'Authorization': 'Basic ' + btoa(environment.CLI_ID + ':' + environment.CLI_SECRET),
       'Content-Type': 'application/x-www-form-urlencoded'
     };
-    return this.http.post(URL_TOKEN, params.toString(), { headers });
+    return this.http.post(environment.urlToken, params.toString(), { headers });
   }
 
 

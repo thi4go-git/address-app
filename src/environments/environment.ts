@@ -4,9 +4,12 @@
 
 export const environment = {
   apiUrlBase: 'http://localhost:8080/api',
+  urlToken: 'http://192.168.1.254:8180/realms/quarkus-keycloak-realm/protocol/openid-connect/token',
   production: false,
-  CLI_ID: 'karkus-keycloak-client',
-  CLI_SECRET: 'Yo0q11Jt70p6DnT0vNRM6nnBf8jDGNzl'
+  CLI_ID: 'token-jwt-app',
+  CLI_SECRET: '6gbfK0z02yxmqYcHqp2vVeeeqM97Fe16'
+
+  // 'http://192.168.1.254:8180/realms/quarkus-keycloak-realm/protocol/openid-connect/token'
 };
 
 /*

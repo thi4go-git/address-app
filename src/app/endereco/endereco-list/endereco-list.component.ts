@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
 import { EnderecoService } from 'src/app/endereco.service';
 import { EnderecoList } from '../enderecoList';
 
@@ -9,9 +10,12 @@ import { EnderecoList } from '../enderecoList';
 })
 export class EnderecoListComponent implements OnInit {
 
-  colunas = ['id', 'cep', 'logradouro', 'complemento',
-    'bairro', 'localidade', 'uf', 'ibge', 'gia', 'ddd', 'siafi'];
 
+  totalElementos = 0;
+  pagina = 0;
+  tamanho = 10;
+  pageSizeOptions: number[] = [10];
+  qtdeRegistros: number;
   listaEnderecos: EnderecoList[] = [];
 
   constructor(private service: EnderecoService) { }
@@ -21,14 +25,17 @@ export class EnderecoListComponent implements OnInit {
 
     this.service.listarClientes()
       .subscribe(resposta => {
-        console.log(resposta);
-        this.listaEnderecos = resposta;  
+        this.listaEnderecos = resposta;
       }, responseError => {
         console.log(responseError);
       });
 
   }
 
+
+  paginar(event: PageEvent) {
+    this.pagina = event.pageIndex;
+  }
 
 
 
